@@ -37,7 +37,7 @@ set.seed(25)
 setControl <- trainControl(
   method = "repeatedcv",
   number = 6, #usar 64/n = numero de taxas
-  repeats=1000,
+  repeats=10,
   verboseIter = FALSE,
   classProbs=TRUE # ,
   # sampling = "up" 
@@ -62,3 +62,13 @@ confusionMatrix(data=pred.test,reference=Test$Class)
 #Importancia de la variable
 vi <- varImp(model,scale=TRUE,sort=TRUE)
 plot(vi)
+
+#Plotear
+cr <- raster("C:/Users/USER/Documents/INDESCES/classrast.tif")
+#Aridic Haplustolls
+#Pachic Haplustolls
+#Sodic Haplocambids
+#Torriorthentic Haplustolls
+#Typic Haplocambids
+#Typic Torriorthents
+

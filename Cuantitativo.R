@@ -62,7 +62,7 @@ coordinates(residuos ) = ~X+Y
 variog = variogram(residuos~1, residuos, cutoff=5000,width=100)
 plot(variog)
 #Ajustar parametros del variograma
-variog.ajust <- fit.variogram(variog, model=vgm(psill=0.2, model="Gau", range=500, nugget=0), fit.ranges =  F)
+variog.ajust <- fit.variogram(variog, model=vgm(psill=0.2, model=c("Exp"), range=500, nugget=0), fit.ranges =  F)
 variog.ajust
 plot(variog, variog.ajust)
 
